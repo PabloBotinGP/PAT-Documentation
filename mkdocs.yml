@@ -1,0 +1,46 @@
+site_name: PAT Documentation
+site_description: Annual data update process for the PAT (Procurement Analysis Tool) Master DataBook
+
+# Repository
+repo_name: PAT-Documentation
+repo_url: https://github.com/your-org/PAT-Documentation
+
+# Simple Material theme
+theme:
+  name: material
+  features:
+    - navigation.tabs
+    - search.highlight
+    - toc.follow
+  palette:
+    scheme: default
+    primary: indigo
+    accent: cyan
+
+# Navigation structure
+nav:
+  - Home: index.md
+  - Introduction: introduction.md
+  - Data Architecture: data_architecture.md
+  - Process Steps:
+    - Data Collection: data_submit.md
+    - Utilities Update: utilities_update.md
+    - Competitive Suppliers: competitive_suppliers.md
+    - Other Updates: other_updates.md
+  - Future Work: future_work.md
+
+# Basic plugins
+plugins:
+  - search
+
+# Essential markdown extensions
+markdown_extensions:
+  - admonition
+  - attr_list
+  - toc:
+      permalink: true
+  - pymdownx.highlight
+  - pymdownx.superfences
+
+# Copyright
+copyright: Copyright &copy; 2025 National Renewable Energy Laboratory
