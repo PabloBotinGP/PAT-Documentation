@@ -11,10 +11,10 @@
       
       
       
-        <link rel="prev" href="../data_architecture/">
+        <link rel="prev" href="../update_process/">
       
       
-        <link rel="next" href="../competitive_suppliers/">
+        <link rel="next" href="../other_updates/">
       
       
       <link rel="icon" href="../assets/images/favicon.png">
@@ -252,11 +252,11 @@
     
     
       <li class="md-tabs__item md-tabs__item--active">
-        <a href="../data_submit.md" class="md-tabs__link">
+        <a href="../update_process/" class="md-tabs__link">
           
   
   
-  Process Steps
+  Update Process
 
         </a>
       </li>
@@ -270,13 +270,13 @@
   
   
     <li class="md-tabs__item">
-      <a href="../future_work.md" class="md-tabs__link">
+      <a href="../source_list/" class="md-tabs__link">
         
   
   
     
   
-  Future Work
+  Source List
 
       </a>
     </li>
@@ -425,7 +425,7 @@
   
   
   <span class="md-ellipsis">
-    Process Steps
+    Update Process
     
   </span>
   
@@ -436,7 +436,7 @@
         <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_4">
             <span class="md-nav__icon md-icon"></span>
-            Process Steps
+            Update Process
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
             
@@ -447,12 +447,12 @@
   
   
     <li class="md-nav__item">
-      <a href="../data_submit.md" class="md-nav__link">
+      <a href="../update_process/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
-    Data Collection
+    Overview
     
   </span>
   
@@ -582,6 +582,15 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#competitive-suppliers-tab-update" class="md-nav__link">
+    <span class="md-ellipsis">
+      Competitive Suppliers Tab Update
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -598,7 +607,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../competitive_suppliers/" class="md-nav__link">
+      <a href="../competitive_suppliers.md" class="md-nav__link">
         
   
   
@@ -626,7 +635,7 @@
   
   
   <span class="md-ellipsis">
-    Other Updates
+    Other
     
   </span>
   
@@ -651,12 +660,12 @@
   
   
     <li class="md-nav__item">
-      <a href="../future_work.md" class="md-nav__link">
+      <a href="../source_list/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
-    Future Work
+    Source List
     
   </span>
   
@@ -750,6 +759,15 @@
   <a href="#checklists-optional" class="md-nav__link">
     <span class="md-ellipsis">
       Checklists (Optional)
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#competitive-suppliers-tab-update" class="md-nav__link">
+    <span class="md-ellipsis">
+      Competitive Suppliers Tab Update
     </span>
   </a>
   
@@ -854,6 +872,35 @@
 - [ ] Errors reviewed with Jill<br />
 - [ ] Corrections applied<br />
 - [ ] CSV re-exported and sent</p>
+<hr />
+<h2 id="competitive-suppliers-tab-update">Competitive Suppliers Tab Update<a class="headerlink" href="#competitive-suppliers-tab-update" title="Permanent link">&para;</a></h2>
+<p>What to include here:</p>
+<ul>
+<li>A brief explanation of what Competitive Suppliers are and how they differ from standard utilities (retail suppliers in restructured markets, do not own distribution wires, offer retail contracts).</li>
+<li>The canonical source for the competitive suppliers list is the EIA's EIA-861 Schedule 4B (Retail Power Market sales / Competitive Suppliers), which is consistently formatted.</li>
+</ul>
+<p>Why this is straightforward</p>
+<ul>
+<li>Schedule 4B is published in a consistent layout each release, so updating the Competitive Suppliers tab is usually a replace-the-tab operation rather than a piecemeal merge.</li>
+<li>Recent EIA releases include <code>EIAID</code> for suppliers; when present, use <code>EIAID</code> as the stable key for matching and de-duplication.</li>
+</ul>
+<p>Step-by-step</p>
+<ol>
+<li>Download Schedule 4B from the EIA-861 page: https://www.eia.gov/electricity/data/eia861/</li>
+<li>Save a dated copy of the source in <code>Update_Materials/</code>.</li>
+<li>In the Master DataBook, create a new worksheet named <code>Competitive Suppliers (YYYY-MM-DD)</code>, paste the Schedule 4B contents, and verify the columns (Supplier Name, State, EIAID, etc.).</li>
+<li>Prefer matching on <code>EIAID</code> when present; otherwise use normalized supplier name + state.</li>
+<li>Replace the canonical <code>Competitive Suppliers</code> tab with the values-only contents of the new sheet (copy values only).</li>
+<li>Add a change log entry (date, initials, source file/version, any normalization notes).</li>
+<li>Export a values-only CSV if required and deliver to Jill for ingestion. Address any ingestion errors and re-export if needed.</li>
+</ol>
+<p>Quick checks</p>
+<ul>
+<li>Ensure <code>EIAID</code> uniqueness (if present).</li>
+<li>Run simple normalization (trim whitespace, consistent casing, remove obvious suffix noise like <code>, Inc.</code>).</li>
+<li>Verify required fields (Supplier Name, State, EIAID if expected) are present before delivery.</li>
+</ul>
+<hr />
 
 
 
