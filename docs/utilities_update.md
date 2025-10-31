@@ -88,3 +88,35 @@ This section describes the yearly workflow to update the **Options with Unique U
 - [ ] Errors reviewed with Jill  
 - [ ] Corrections applied  
 - [ ] CSV re-exported and sent
+
+---
+
+## Competitive Suppliers Tab Update
+
+What to include here:
+
+- A brief explanation of what Competitive Suppliers are and how they differ from standard utilities (retail suppliers in restructured markets, do not own distribution wires, offer retail contracts).
+- The canonical source for the competitive suppliers list is the EIA's EIA-861 Schedule 4B (Retail Power Market sales / Competitive Suppliers), which is consistently formatted.
+
+Why this is straightforward
+
+- Schedule 4B is published in a consistent layout each release, so updating the Competitive Suppliers tab is usually a replace-the-tab operation rather than a piecemeal merge.
+- Recent EIA releases include `EIAID` for suppliers; when present, use `EIAID` as the stable key for matching and de-duplication.
+
+Step-by-step
+
+1. Download Schedule 4B from the EIA-861 page: https://www.eia.gov/electricity/data/eia861/
+2. Save a dated copy of the source in `Update_Materials/`.
+3. In the Master DataBook, create a new worksheet named `Competitive Suppliers (YYYY-MM-DD)`, paste the Schedule 4B contents, and verify the columns (Supplier Name, State, EIAID, etc.).
+4. Prefer matching on `EIAID` when present; otherwise use normalized supplier name + state.
+5. Replace the canonical `Competitive Suppliers` tab with the values-only contents of the new sheet (copy values only).
+6. Add a change log entry (date, initials, source file/version, any normalization notes).
+7. Export a values-only CSV if required and deliver to Jill for ingestion. Address any ingestion errors and re-export if needed.
+
+Quick checks
+
+- Ensure `EIAID` uniqueness (if present).
+- Run simple normalization (trim whitespace, consistent casing, remove obvious suffix noise like `, Inc.`).
+- Verify required fields (Supplier Name, State, EIAID if expected) are present before delivery.
+
+---

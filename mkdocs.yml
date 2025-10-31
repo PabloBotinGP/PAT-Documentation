@@ -22,12 +22,13 @@ nav:
   - Home: index.md
   - Introduction: introduction.md
   - Data Architecture: data_architecture.md
-  - Process Steps:
-    - Data Collection: data_submit.md
+  - Update Process:
+    - Overview: update_process.md
     - Utilities Update: utilities_update.md
     - Competitive Suppliers: competitive_suppliers.md
-    - Other Updates: other_updates.md
-  - Future Work: future_work.md
+    - Other: other_updates.md
+  
+  - Source List: source_list.md
 
 # Basic plugins
 plugins:

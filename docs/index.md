@@ -6,4 +6,4 @@ This site documents the annual update workflow for the PAT (Procurement Analysis
 - [Introduction](introduction.md) 
 - [Data Architecture](data_architecture.md)
 - [Update Process](update_process.md)
-- [Source List](sources_to_watch.md)
+- [Source List](source_list.md)

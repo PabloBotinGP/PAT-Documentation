@@ -1,0 +1,1007 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Annual data update process for the PAT (Procurement Analysis Tool) Master DataBook">
+      
+      
+      
+      
+        <link rel="prev" href="../data_architecture/">
+      
+      
+        <link rel="next" href="../utilities_update/">
+      
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.21">
+    
+    
+      
+        <title>Overview - PAT Documentation</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.2a3383ac.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="cyan">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#update-process" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="PAT Documentation" class="md-header__button md-logo" aria-label="PAT Documentation" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            PAT Documentation
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Overview
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+    
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/your-org/PAT-Documentation" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.0.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    PAT-Documentation
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href=".." class="md-tabs__link">
+        
+  
+  
+    
+  
+  Home
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../introduction/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Introduction
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../data_architecture/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Data Architecture
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="./" class="md-tabs__link">
+          
+  
+  
+  Update Process
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../source_list/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Source List
+
+      </a>
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="PAT Documentation" class="md-nav__button md-logo" aria-label="PAT Documentation" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    PAT Documentation
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/your-org/PAT-Documentation" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.0.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    PAT-Documentation
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Home
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../introduction/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Introduction
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../data_architecture/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Data Architecture
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    Update Process
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            Update Process
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    Overview
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    Overview
+    
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#sections" class="md-nav__link">
+    <span class="md-ellipsis">
+      Sections
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#data-collection" class="md-nav__link">
+    <span class="md-ellipsis">
+      Data Collection
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#data-cleaning" class="md-nav__link">
+    <span class="md-ellipsis">
+      Data Cleaning
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#data-integration" class="md-nav__link">
+    <span class="md-ellipsis">
+      Data Integration
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tab-specific-updates" class="md-nav__link">
+    <span class="md-ellipsis">
+      Tab-Specific Updates
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Tab-Specific Updates">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#options-with-utilities" class="md-nav__link">
+    <span class="md-ellipsis">
+      Options with Utilities
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#competitive-suppliers-tab-update" class="md-nav__link">
+    <span class="md-ellipsis">
+      Competitive Suppliers Tab Update
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#utility-state-tabs" class="md-nav__link">
+    <span class="md-ellipsis">
+      Utility &amp; State Tabs
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../utilities_update/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Utilities Update
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../competitive_suppliers.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Competitive Suppliers
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../other_updates/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Other
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../source_list/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Source List
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#sections" class="md-nav__link">
+    <span class="md-ellipsis">
+      Sections
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#data-collection" class="md-nav__link">
+    <span class="md-ellipsis">
+      Data Collection
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#data-cleaning" class="md-nav__link">
+    <span class="md-ellipsis">
+      Data Cleaning
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#data-integration" class="md-nav__link">
+    <span class="md-ellipsis">
+      Data Integration
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tab-specific-updates" class="md-nav__link">
+    <span class="md-ellipsis">
+      Tab-Specific Updates
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Tab-Specific Updates">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#options-with-utilities" class="md-nav__link">
+    <span class="md-ellipsis">
+      Options with Utilities
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#competitive-suppliers-tab-update" class="md-nav__link">
+    <span class="md-ellipsis">
+      Competitive Suppliers Tab Update
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#utility-state-tabs" class="md-nav__link">
+    <span class="md-ellipsis">
+      Utility &amp; State Tabs
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  
+  
+
+
+<h1 id="update-process">Update Process<a class="headerlink" href="#update-process" title="Permanent link">&para;</a></h1>
+<p>The update process ensures the PAT Master DataBook remains accurate, consistent, and up-to-date. It involves the following steps:</p>
+<h2 id="sections">Sections<a class="headerlink" href="#sections" title="Permanent link">&para;</a></h2>
+<p>Quick links to the Update Process sections:</p>
+<ul>
+<li><a href="#update-process">Overview</a></li>
+<li><a href="#data-collection">Data Collection</a></li>
+<li><a href="#data-cleaning">Data Cleaning</a></li>
+<li><a href="#data-integration">Data Integration</a></li>
+<li><a href="#options-with-utilities">Utilities Update</a></li>
+<li><a href="#competitive-suppliers-tab-update">Competitive Suppliers</a></li>
+<li><a href="#other-tab-updates">Utilities &amp; States</a></li>
+</ul>
+<h2 id="data-collection">Data Collection<a class="headerlink" href="#data-collection" title="Permanent link">&para;</a></h2>
+<ul>
+<li>Identify and gather new procurement options from recurring sources (e.g., LevelTen quarterly updates, annual EIA releases) and spontaneous sources (e.g., news, articles). Refer to the <a href="sources_to_watch.md">Sources to Watch</a> section for a detailed list of sources.</li>
+<li>Store all collected data in the "Current Data Collection" folder for processing.</li>
+</ul>
+<h2 id="data-cleaning">Data Cleaning<a class="headerlink" href="#data-cleaning" title="Permanent link">&para;</a></h2>
+<ul>
+<li>Evaluate, pre-process, and standardize the collected data.</li>
+<li>Adapt the data into the Master DataBook structure to ensure accuracy and reliability.</li>
+</ul>
+<h2 id="data-integration">Data Integration<a class="headerlink" href="#data-integration" title="Permanent link">&para;</a></h2>
+<ul>
+<li>Update the Master DataBook with cleaned and standardized data.</li>
+<li>Organize the data into appropriate tabs, ensuring inter-tab consistency.</li>
+<li>Once updates have been applied and reviewed, create a copy of the new version of the Master DataBook that includes the latest updates on the Update Tracker tab. Save to a copy in Archive (include date on name). </li>
+<li>Integration requires careful attention to formatting, delimiters, and consistency with existing records, so it is really important to create a copy in order to be able to revert future changes. </li>
+</ul>
+<h2 id="tab-specific-updates">Tab-Specific Updates<a class="headerlink" href="#tab-specific-updates" title="Permanent link">&para;</a></h2>
+<ul>
+<li><a href="#options-with-utilities"><strong>Options with Utilities</strong></a>: Document the process for updating utility-related data.</li>
+<li><a href="#competitive-suppliers-tab-update"><strong>Competitive Suppliers Tab Update</strong></a>: Outline the steps for updating competitive supplier data.</li>
+<li><a href="#other-tab-updates"><strong>Other Tab Updates</strong></a>: Include instructions for updating other relevant tabs.</li>
+</ul>
+<h3 id="options-with-utilities"><strong>Options with Utilities</strong><a class="headerlink" href="#options-with-utilities" title="Permanent link">&para;</a></h3>
+<p>This tab is the primary dataset for procurement options and is the most important sheet in the Master DataBook. It contains the majority of procurement options and is the main dataset that must be delivered to the Web App development team (currently Jill).</p>
+<p>The <code>Information</code> tab within the Master DataBook describes each column in detail. As a quick overview:</p>
+<ul>
+<li>Columns A through (e.g., F) contain city / state / utility information — these fields are the primary keys used by the PAT tool.</li>
+<li>The remaining columns are grouped by procurement option type (visually highlighted in blue in the Master DataBook). Each procurement type has several information columns to its right that capture program-specific details.</li>
+</ul>
+<p>When integrating new procurement options, follow this two-step approach:</p>
+<ol>
+<li>
+<p><strong>Pre-clean:</strong> Transform external procurement info (which comes in various forms) into the same column layout and formatting as the Master DataBook. This often requires filtering the original info but also performing additional research to populate all fields.</p>
+</li>
+<li>
+<p><strong>Integrate:</strong> Paste the pre-cleaned record(s) into the <code>Options with Utilities</code> tab following these rules: </p>
+<ul>
+<li>
+<p>The procurement type column is a binary indicator (0/1). If an option of that type exists for a given utility, the cell should be set to <code>1</code>.</p>
+</li>
+<li>
+<p>To the right of the binary column is a "program count" column that stores the number of programs for that procurement type. When adding a new program, ensure this count is accurate.</p>
+</li>
+<li>
+<p>Some information columns for a procurement type are concatenated lists (separated by a ',,,' delimiter) when multiple programs exist for the same utility and type.</p>
+</li>
+</ul>
+</li>
+</ol>
+<p>Integration scenarios (how to handle different cases):</p>
+<ul>
+<li>
+<p><strong>City / Utility does not exist in the sheet</strong></p>
+<ul>
+<li>Add a new row with the city and all related state/utility metadata. This will usually require extra research to identfy to which state and utility the city corresponds.</li>
+<li>Copy the procurement option details from the pre-cleaned file into the corresponding procurement-type columns for the new row. Set the procurement-type binary to <code>1</code> and the program count to the appropriate number (usually <code>1</code> for a single new option).</li>
+<li>Make sure to mantain formula cells. </li>
+</ul>
+</li>
+<li>
+<p><strong>City / Utility already exists in the sheet</strong></p>
+<ul>
+<li>
+<p>Procurement type already has at least one option for this utility</p>
+<ul>
+<li>Increment the program count by <code>1</code>.</li>
+<li>Append the new program's values into the existing information cells for that procurement type using the agreed delimiter (e.g., ",,,"). Ensure the appended values are in the same column order and format as existing entries.</li>
+</ul>
+</li>
+<li>
+<p>No options exist yet for this procurement type</p>
+<ul>
+<li>Set the procurement-type binary to <code>1</code>.</li>
+<li>Set the program count to <code>1</code> and directly paste the pre-cleaned program information into the procurement-type columns.</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="competitive-suppliers-tab-update"><strong>Competitive Suppliers Tab Update</strong><a class="headerlink" href="#competitive-suppliers-tab-update" title="Permanent link">&para;</a></h3>
+<p><strong>What are Competitive Suppliers?</strong></p>
+<p>Competitive suppliers (also called retail energy suppliers, third-party suppliers, or ESCOs in some states) are companies that sell electricity or energy services directly to end customers in certain states. They are distinct from standard regulated utilities in that:</p>
+<ul>
+<li>Standard utilities typically own or operate the distribution system and have obligation-to-serve responsibilities for customers within their service territory.</li>
+<li>Competitive suppliers do not generally own the local wires; instead they offer retail supply contracts, pricing, and services to customers in restructured markets where customers can choose their supplier.</li>
+</ul>
+<p>Because competitive suppliers operate only in markets with retail choice, their coverage and identifiers (such as names and IDs) are typically reported at the market or state level rather than by local distribution territory. In the PAT Master DataBook, the Competitive Suppliers tab contains the list of these suppliers.</p>
+<p><strong>Update Approach</strong></p>
+<p>Updating Competitive Suppliers is generally more straightforward than some other tabs because the primary source — the EIA's EIA-861 data (Schedule 4B) — is published in a consistent format each release. That means the file layout rarely changes and updates can be handled by replacing the existing tab with the latest schedule export.</p>
+<p>Note: historically Competitive Suppliers did not always include an <code>EIAID</code> value, but recent EIA-861 releases include EIA identifiers for suppliers. This is helpful because we can use <code>EIAID</code> as the key for matching and de-duplicating records.</p>
+<p><strong>Steps</strong></p>
+<ol>
+<li>
+<p><strong>Primary source: EIA-861 Schedule 4B</strong></p>
+</li>
+<li>
+<p>Download the Competitive Suppliers / Retail Power Market sales schedule (Schedule 4B) from the EIA EIA-861 page:
+    https://www.eia.gov/electricity/data/eia861/</p>
+</li>
+<li>
+<p>The Schedule 4B file is consistently formatted each release. Open the published CSV/Excel and inspect columns such as Supplier Name, State, and EIAID.</p>
+</li>
+<li>
+<p><strong>Replace the Competitive Suppliers tab</strong></p>
+</li>
+<li>
+<p>Save a dated copy of the source in <code>Update_Materials/</code>.</p>
+</li>
+<li>
+<p>In the Master DataBook, create a new worksheet/tab named <code>Competitive Suppliers (YYYY-MM-DD)</code> or similar, paste the fresh Schedule 4B data into that tab, and verify column alignment.</p>
+</li>
+<li>
+<p>Once verified, remove the previous <code>Competitive Suppliers</code> tab in the Master DataBook. </p>
+</li>
+<li>
+<p><strong>Record the update and deliver</strong></p>
+</li>
+<li>
+<p>Add an Update Tracker entry: date, updater initials, source file name/version, and any normalization notes.</p>
+</li>
+<li>
+<p>Export a values-only CSV (if required by the ingestion process) and notify Jill about the update. </p>
+</li>
+</ol>
+<h3 id="utility-state-tabs"><strong>Utility &amp; State Tabs</strong><a class="headerlink" href="#utility-state-tabs" title="Permanent link">&para;</a></h3>
+<p>The <strong>Utility</strong> tab contains metadata about utilities (service territory name, utility name, state, EIAID, and other identifying fields). Because many rows in the Master DataBook reference the same utility, keeping this information centralized reduces duplication: update the utility record once here and those changes propagate conceptually to any options that reference that utility. Use this tab to add newly discovered utilities, correct names or IDs, and maintain contact/territory information.</p>
+<p>The <strong>State</strong> tab serves a similar purpose for state-level attributes: electricity choice status, average price references, official links, and customer-eligibility notes. Update state-level facts here so downstream inference (for example, which utilities operate in restructured markets or which fields should be populated automatically) remains consistent.</p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      Copyright &copy; 2025 National Renewable Energy Laboratory
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      <script id="__config" type="application/json">{"base": "..", "features": ["navigation.tabs", "search.highlight", "toc.follow"], "search": "../assets/javascripts/workers/search.973d3a69.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.f55a23d4.min.js"></script>
+      
+    
+  </body>
+</html>
