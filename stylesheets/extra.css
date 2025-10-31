@@ -1,0 +1,226 @@
+/* PAT/NREL Custom Styling */
+
+:root {
+  /* NREL Brand Colors */
+  --nrel-blue: #0079c2;
+  --nrel-dark-blue: #003366;
+  --nrel-light-blue: #4a9eff;
+  --nrel-green: #00a651;
+  --nrel-dark-green: #006837;
+  --nrel-orange: #ff6900;
+  --nrel-yellow: #ffd100;
+  --nrel-gray: #666666;
+  --nrel-light-gray: #f5f5f5;
+}
+
+/* Header customization */
+.md-header {
+  background-color: var(--nrel-blue);
+  color: white;
+}
+
+.md-header-nav__button {
+  color: white;
+}
+
+.md-header-nav__title {
+  color: white;
+  font-weight: 600;
+}
+
+/* Navigation customization */
+.md-nav--primary .md-nav__title {
+  background-color: var(--nrel-dark-blue);
+  color: white;
+  font-weight: 600;
+}
+
+.md-nav__link--active {
+  color: var(--nrel-blue);
+  font-weight: 600;
+}
+
+.md-nav__link:hover {
+  color: var(--nrel-green);
+}
+
+/* Tabs styling */
+.md-tabs {
+  background-color: var(--nrel-dark-blue);
+}
+
+.md-tabs__link {
+  color: white;
+  opacity: 0.8;
+}
+
+.md-tabs__link--active,
+.md-tabs__link:hover {
+  color: white;
+  opacity: 1;
+}
+
+/* Content styling */
+.md-content__inner {
+  margin: 0 auto;
+  max-width: 1200px;
+}
+
+/* Custom admonitions for energy/sustainability theme */
+.md-typeset .admonition.energy {
+  border-left: 4px solid var(--nrel-green);
+}
+
+.md-typeset .admonition.energy > .admonition-title {
+  background-color: rgba(0, 166, 81, 0.1);
+}
+
+.md-typeset .admonition.energy > .admonition-title::before {
+  background-color: var(--nrel-green);
+  mask-image: var(--md-admonition-icon--abstract);
+}
+
+.md-typeset .admonition.data {
+  border-left: 4px solid var(--nrel-blue);
+}
+
+.md-typeset .admonition.data > .admonition-title {
+  background-color: rgba(0, 121, 194, 0.1);
+}
+
+.md-typeset .admonition.data > .admonition-title::before {
+  background-color: var(--nrel-blue);
+  mask-image: var(--md-admonition-icon--info);
+}
+
+/* Button styling */
+.md-button {
+  background-color: var(--nrel-blue);
+  border-color: var(--nrel-blue);
+  color: white;
+}
+
+.md-button:hover {
+  background-color: var(--nrel-dark-blue);
+  border-color: var(--nrel-dark-blue);
+}
+
+.md-button--primary {
+  background-color: var(--nrel-green);
+  border-color: var(--nrel-green);
+}
+
+.md-button--primary:hover {
+  background-color: var(--nrel-dark-green);
+  border-color: var(--nrel-dark-green);
+}
+
+/* Link styling */
+.md-content a {
+  color: var(--nrel-blue);
+}
+
+.md-content a:hover {
+  color: var(--nrel-green);
+}
+
+/* Code blocks */
+.md-typeset code {
+  background-color: var(--nrel-light-gray);
+  color: var(--nrel-dark-blue);
+}
+
+.md-typeset pre code {
+  background-color: var(--nrel-dark-blue);
+  color: white;
+}
+
+/* Tables */
+.md-typeset table:not([class]) th {
+  background-color: var(--nrel-blue);
+  color: white;
+}
+
+.md-typeset table:not([class]) tr:nth-child(2n) {
+  background-color: var(--nrel-light-gray);
+}
+
+/* Footer */
+.md-footer {
+  background-color: var(--nrel-dark-blue);
+  color: white;
+}
+
+.md-footer-nav__link {
+  color: white;
+}
+
+.md-footer-nav__link:hover {
+  color: var(--nrel-yellow);
+}
+
+/* Search */
+.md-search__form {
+  background-color: rgba(255, 255, 255, 0.12);
+}
+
+.md-search__input {
+  color: white;
+}
+
+.md-search__input::placeholder {
+  color: rgba(255, 255, 255, 0.54);
+}
+
+/* TOC styling */
+.md-nav--secondary .md-nav__link--active {
+  color: var(--nrel-blue);
+  border-left: 2px solid var(--nrel-green);
+  padding-left: 10px;
+}
+
+/* Custom styling for PAT branding */
+.pat-logo {
+  height: 40px;
+  width: auto;
+}
+
+.nrel-brand {
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+}
+
+.energy-highlight {
+  background: linear-gradient(135deg, var(--nrel-green), var(--nrel-blue));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  font-weight: 600;
+}
+
+/* Responsive adjustments */
+@media screen and (max-width: 76.1875em) {
+  .md-nav--primary .md-nav__title {
+    background-color: var(--nrel-blue);
+  }
+}
+
+/* Custom hero section for homepage */
+.hero-section {
+  background: linear-gradient(135deg, var(--nrel-blue), var(--nrel-green));
+  color: white;
+  padding: 60px 20px;
+  text-align: center;
+  margin: -24px -24px 24px -24px;
+}
+
+.hero-section h1 {
+  color: white;
+  font-size: 2.5em;
+  margin-bottom: 0.5em;
+}
+
+.hero-section p {
+  font-size: 1.2em;
+  opacity: 0.9;
+}
