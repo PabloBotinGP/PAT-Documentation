@@ -11,9 +11,10 @@ This documentation defines the annual data update process for the PAT (Procureme
 
 ### Setup (Local Development)
 
-1. Clone or navigate to the repository:
+1. Clone:
+    From the desired directory where you want to have the repo...
    ```bash
-   cd /Users/pbotin/Documents/PAT/PAT-Documentation
+   git clone https://github.com/PabloBotinGP/PAT-Documentation.git
    ```
 
 2. Create a Python virtual environment (recommended):
